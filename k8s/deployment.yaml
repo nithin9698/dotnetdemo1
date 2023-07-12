@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: dockerdep-10-app
-        image: nithin96989698/dotnet-demoapp
+        image: nithin96989698/dotnet-demoapp:latest
         ports:
         - containerPort: 80
