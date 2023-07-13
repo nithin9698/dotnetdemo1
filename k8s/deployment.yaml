@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: docker
+  namespace: meda
   labels:
     app: myapp
 spec:
@@ -16,6 +17,8 @@ spec:
     spec:
       containers:
       - name: dockerdep-10-app
-        image: nithin96989698/dotnet-demoapp:latest
+        image: ethen.azurecr.io/dotnet-demoapp:latest
         ports:
         - containerPort: 80
+      imagePullSecrets:
+      -name: nithin
